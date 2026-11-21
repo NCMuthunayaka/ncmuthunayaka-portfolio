@@ -1,0 +1,4 @@
+.companion-trigger .companion-label{justify-content:center;min-width:132px;min-height:44px;padding:11px 20px;border-radius:0;border:0;background:transparent;box-shadow:none}
+.companion-trigger .companion-label .orbit-button-text{font-size:14px;font-weight:700;letter-spacing:.025em;color:#e5f5ff;text-shadow:0 1px 0 #82afd0,0 2px 0 #285170,0 3px 3px #021526}
+.companion-trigger:hover .companion-label,.companion-trigger:active .companion-label,.companion-trigger[aria-expanded="true"] .companion-label{background:transparent;border:0;box-shadow:none;transform:none}
+@media(prefers-reduced-motion:reduce){.companion-trigger:hover .companion-label,.companion-trigger:active .companion-label{transform:none}}

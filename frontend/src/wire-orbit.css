@@ -1,0 +1,16 @@
+.orbit-stage.wire-stage{width:138px;height:151px;background:none}
+.wire-orbit{display:block;width:100%;height:100%;overflow:visible}
+.wire-character{animation:wireFloat 5s ease-in-out infinite}
+.wire-eye{transform-box:fill-box;transform-origin:center;filter:drop-shadow(0 0 3px #39cfff);animation:wireBlink 5s infinite}
+.wire-mesh{opacity:.5}
+.orbit-head-rim{filter:drop-shadow(0 0 2px #33bfff)}
+.orbit-crown{filter:drop-shadow(0 0 2px #36bfff)}
+.waving-arm{transform-box:view-box;transform-origin:122px 108px;transition:transform .35s ease}
+.companion-trigger:hover .waving-arm,.companion-trigger:focus-visible .waving-arm{animation:none}
+.companion-trigger:hover .wire-mesh,.companion-trigger:focus-visible .wire-mesh{stroke:#b2f6ff;opacity:1;transition:stroke .3s}
+.companion-trigger:hover .wire-character{filter:drop-shadow(0 0 3px #43baff88)}
+@keyframes wireFloat{50%{transform:translateY(-3px)}}
+@keyframes wireBlink{0%,44%,49%,100%{transform:scaleY(1)}46%{transform:scaleY(.12)}}
+@keyframes cleanWave{0%,100%{transform:rotate(0deg)}20%{transform:rotate(-135deg)}36%{transform:rotate(-112deg)}52%{transform:rotate(-140deg)}68%{transform:rotate(-112deg)}82%{transform:rotate(-135deg)}}
+@media(max-width:600px){.orbit-stage.wire-stage{width:122px;height:133px}}
+@media(prefers-reduced-motion:reduce){.wire-character,.wire-eye,.companion-trigger:hover .waving-arm,.companion-trigger:focus-visible .waving-arm{animation:none!important;transition:none!important}}

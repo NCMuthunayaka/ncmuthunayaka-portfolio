@@ -1,0 +1,12 @@
+.companion-trigger .companion-label{display:flex;align-items:center;justify-content:space-between;gap:12px;min-width:142px;min-height:44px;padding:6px 7px 6px 17px;border:1px solid #639de099;border-radius:14px;background:linear-gradient(135deg,#245993,#153758);color:#eef8ff;box-shadow:inset 0 1px 0 #d5eeff22,0 6px 20px #0005;font-size:13px;font-weight:600;letter-spacing:.01em;transition:background-color .25s,border-color .25s,box-shadow .25s,transform .25s}
+.companion-trigger .companion-label .orbit-button-text{margin:0;color:inherit}
+.companion-trigger .companion-label .orbit-button-icon{display:grid;place-items:center;margin:0;width:30px;height:30px;border-radius:9px;background:#cae6ff12;color:#c8eaff;border:1px solid #bbdeff1a}
+.orbit-button-icon .action-icon{width:17px;height:17px}
+.companion-trigger:hover .companion-label{border-color:#a1d6ff;background:linear-gradient(135deg,#2b6bb1,#1a4773);box-shadow:inset 0 1px 0 #d5eeff33,0 7px 24px #00183188;transform:translateY(-1px)}
+.companion-trigger:hover .icon-forward{transform:translateX(2px)}
+.companion-trigger:active .companion-label{transform:translateY(0)}
+.companion-trigger:focus-visible{outline:none}
+.companion-trigger:focus-visible .companion-label{outline:2px solid #b2d9ff;outline-offset:4px}
+.companion-trigger[aria-expanded="true"] .companion-label{background:#102a44;border-color:#6286a9}
+@media(max-width:600px){.companion-trigger .companion-label{min-width:130px;font-size:12px;padding-left:14px}}
+@media(prefers-reduced-motion:reduce){.companion-trigger .companion-label,.orbit-button-icon .action-icon{transition:none!important;transform:none!important}}
