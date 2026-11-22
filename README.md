@@ -41,4 +41,16 @@ Use the root `render.yaml` as a Blueprint. It creates:
 1. `portfolio-web` as a static site
 2. `portfolio-api` as a Python web service
 
-After the API URL is created, set `FRONTEND_ORIGIN` on `portfolio-api` to the deployed frontend URL. The API currently exposes `/health` and a safe placeholder `/api/ask`; the full source-grounded assistant is scheduled for Day 4.
+After the API URL is created, set `FRONTEND_ORIGIN` on `portfolio-api` to the deployed frontend URL. The API exposes `/health` and a safe `/api/ask` fallback while the source-grounded provider integration is pending.
+
+Backend environment variables:
+
+- `PORT` — Render supplies the service port.
+- `FRONTEND_ORIGIN` — the exact frontend origin allowed by CORS.
+
+Run backend checks with:
+
+```bash
+cd backend
+python -m unittest discover -p "test_*.py"
+```
