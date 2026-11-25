@@ -1,0 +1,30 @@
+[
+  {
+    "route": "/",
+    "violations": []
+  },
+  {
+    "route": "/projects/govisense",
+    "violations": []
+  },
+  {
+    "route": "/assistant",
+    "violations": []
+  },
+  {
+    "route": "/contact",
+    "violations": []
+  },
+  {
+    "route": "/about",
+    "violations": []
+  },
+  {
+    "route": "/resume",
+    "violations": []
+  },
+  {
+    "route": "/blog",
+    "violations": []
+  }
+]

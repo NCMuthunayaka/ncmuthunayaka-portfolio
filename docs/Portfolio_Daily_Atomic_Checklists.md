@@ -1,3 +1,9 @@
+# Status update — 25 November 2026
+
+This historical checklist contains earlier assertions that were not all verified. See [implementation-status.md](implementation-status.md) for the current, evidence-based implementation and launch status. Approval, hosting and live CMS gates remain open; unchecked historical items must not be interpreted as all still unimplemented.
+
+---
+
 # Portfolio / Daily Execution Checklists
 
 **Atomic Checklists: Day 0 to Day 5**
