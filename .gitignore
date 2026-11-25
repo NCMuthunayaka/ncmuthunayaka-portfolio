@@ -4,4 +4,9 @@ frontend/dist/
 backend/.venv/
 backend/__pycache__/
 .env
+.env.*
+!.env.example
+.sanity/
+studio/dist/
+backend/.rate-limits.sqlite3*
 *.pyc
