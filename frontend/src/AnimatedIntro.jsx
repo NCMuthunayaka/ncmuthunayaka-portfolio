@@ -36,7 +36,8 @@ export default function AnimatedIntro() {
     return () => clearTimeout(timer)
   }, [reduced])
   return <div className="animated-intro">
-    <p className="intro-typewriter" aria-label={phrases.join(' ')}>
+    <p className="intro-typewriter">
+      <span className="sr-only">{phrases.join(' ')}</span>
       {phrases.map(phrase => <span key={phrase} className="intro-size-guide" aria-hidden="true">{phrase}<span className="typing-cursor still">|</span></span>)}
       <span className="intro-visible-text" aria-hidden="true">{reduced ? phrases[0] : text}<span className={reduced ? 'typing-cursor still' : 'typing-cursor'}>|</span></span>
     </p>

@@ -4,17 +4,38 @@ services:
     runtime: python
     rootDir: backend
     buildCommand: pip install -r requirements.txt
-    startCommand: gunicorn app:app
+    startCommand: gunicorn --workers 1 --threads 4 app:app
     healthCheckPath: /health
     envVars:
       - key: FRONTEND_ORIGIN
         sync: false
+      - key: SANITY_PROJECT_ID
+        sync: false
+      - key: SANITY_DATASET
+        value: production
+      - key: DAILY_REQUEST_CAP
+        value: "200"
+      - key: PER_IP_LIMIT
+        value: "10"
+      - key: TRUST_PROXY
+        value: "false"
   - type: web
     name: portfolio-web
     runtime: static
     rootDir: frontend
     buildCommand: npm install && npm run build
     staticPublishPath: dist
+    envVars:
+      - key: VITE_SANITY_PROJECT_ID
+        sync: false
+      - key: VITE_SANITY_DATASET
+        value: production
+      - key: VITE_API_URL
+        sync: false
+      - key: SITE_URL
+        sync: false
+      - key: OG_IMAGE_URL
+        sync: false
     routes:
       - type: rewrite
         source: /*
